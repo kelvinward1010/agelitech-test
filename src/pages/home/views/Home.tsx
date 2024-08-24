@@ -6,9 +6,11 @@ import Header from "../components/Header";
 export function Home() {
     return (
         <div className={styles.container}>
-            <Header />
-            <Body />
-            <Footer />
+            <div className={styles.center}>
+                <Header />
+                <Body />
+                <Footer />
+            </div>
         </div>
     );
 }
