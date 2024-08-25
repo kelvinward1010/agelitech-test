@@ -1,0 +1,29 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+    height: calc(100vh - 100px);
+
+    .head {
+        margin-top: 40px;
+    }
+
+    .main {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .center {
+            width: 300px;
+            height: 400px;
+
+            .button {
+                background: #9c69e2;
+                border-radius: 10px;
+                padding: 3px 50px;
+                color: white;
+            }
+        }
+    }
+}
