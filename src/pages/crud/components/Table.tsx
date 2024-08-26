@@ -11,41 +11,21 @@ function Table({ title, data }: TableProps) {
         <div className={styles.container}>
             <table style={{ padding: "0 3px" }}>
                 <thead>
-                    <tr className="border border-teal-600 text-center bg-teal-700">
+                    <tr>
                         {title.map((i, idx) => {
-                            return (
-                                <th
-                                    key={idx}
-                                    className="border font-medium border-teal-600 px-8 text-white"
-                                >
-                                    {i}
-                                </th>
-                            );
+                            return <th key={idx}>{i}</th>;
                         })}
                     </tr>
                 </thead>
                 <tbody className="tablebodymain">
                     {data?.map((user: IPost, idx) => (
-                        <tr
-                            key={idx}
-                            className="border border-teal-600 text-left"
-                        >
-                            <td className="border w-auto border-teal-600 px-1">
-                                {user?.title}
-                            </td>
-                            <td className="border w-auto border-teal-600 px-1">
-                                {user?.first}
-                            </td>
-                            <td className="border w-auto border-teal-600 px-1">
-                                {user?.last}
-                            </td>
-                            <td className="border w-auto border-teal-600 px-1">
-                                {user?.fullname}
-                            </td>
-                            <td className="border w-auto border-teal-600 px-1">
-                                {user?.username}
-                            </td>
-                            <td className="flex justify-center border w-auto border-teal-600 p-1">
+                        <tr key={idx}>
+                            <td>{user?.title}</td>
+                            <td>{user?.first}</td>
+                            <td>{user?.last}</td>
+                            <td>{user?.fullname}</td>
+                            <td>{user?.username}</td>
+                            <td>
                                 <img
                                     src={user.thumbnail}
                                     alt="img-icon"
