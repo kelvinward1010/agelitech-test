@@ -1,0 +1,22 @@
+.numberinlist {
+    padding: 3px;
+    border-radius: 3px;
+    border: 1px solid teal;
+}
+
+.activenumberinlist {
+    color: white;
+    background-color: teal;
+}
+
+.notactivenumberinlist {
+    background-color: black;
+}
+
+.panigationcontainer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    align-items: center;
+    margin-top: 10px;
+}

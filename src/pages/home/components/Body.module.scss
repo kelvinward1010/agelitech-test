@@ -31,6 +31,21 @@
         }
     }
 
+    .mainbody {
+        margin-top: 50px;
+        width: 100%;
+
+        .headmainbody {
+            width: 100%;
+            text-align: center;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-direction: column;
+        }
+    }
+
     .button {
         background: #9c69e2;
         border-radius: 10px;

@@ -1,0 +1,35 @@
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+    thead {
+        tr {
+            border: 1px solid teal;
+            text-align: center;
+            background-color: gray;
+
+            th {
+                border: 1px solid teal;
+                padding: 0 50px;
+                color: white;
+                font-size: 16px;
+                font-weight: 300;
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            border: 1px solid teal;
+            text-align: center;
+
+            td {
+                border: 1px solid teal;
+                width: auto;
+            }
+        }
+    }
+}

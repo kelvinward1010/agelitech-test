@@ -1,7 +1,7 @@
 import { Typography } from "antd";
 import styles from "./Body.module.scss";
 import { ButtonConfig } from "@/components/buttonconfig";
-import { Image1 } from "@/assets/svg";
+import { Image1 } from "@/assets/png";
 
 const { Title, Text } = Typography;
 
@@ -25,6 +25,16 @@ function Body() {
                 </div>
                 <div className={styles.rightheadbody}>
                     <img className={styles.img1} src={Image1} alt="img" />
+                </div>
+            </div>
+
+            <div className={styles.mainbody}>
+                <div className={styles.headmainbody}>
+                    <Title>Features</Title>
+                    <Text>
+                        Some of the features and advantages that we provide for
+                        those of you who store data in this Data Warehouse.
+                    </Text>
                 </div>
             </div>
         </div>

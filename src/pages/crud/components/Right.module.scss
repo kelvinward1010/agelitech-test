@@ -1,4 +1,23 @@
 .container {
     width: calc(100vw - 200px);
-    height: 100vh;
+    height: calc(100vh - 50px);
+    padding: 50px 20px 0;
+
+    .head {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .formSearch {
+            display: flex;
+            gap: 10px;
+        }
+    }
+
+    .button {
+        background: #9c69e2;
+        border-radius: 10px;
+        padding: 3px 50px;
+        color: white;
+    }
 }
