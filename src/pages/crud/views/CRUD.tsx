@@ -1,7 +1,12 @@
+import Left from "../components/Left";
+import Right from "../components/Right";
+import styles from "./CRUD.module.scss";
+
 export function CRUD() {
     return (
-        <div>
-            <h4>CRUD</h4>
+        <div className={styles.container}>
+            <Left />
+            <Right />
         </div>
     );
 }

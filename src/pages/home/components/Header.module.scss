@@ -2,4 +2,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 20px;
+
+    .button {
+        background: #9c69e2;
+        border-radius: 10px;
+        padding: 3px 50px;
+        color: white;
+    }
 }

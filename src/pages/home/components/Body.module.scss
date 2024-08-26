@@ -1,0 +1,41 @@
+.container {
+    .headbody {
+        display: flex;
+        margin-top: 100px;
+
+        .leftheadbody {
+            padding-left: 10px;
+            display: flex;
+            flex: 1;
+            justify-content: start;
+            align-items: flex-start;
+            flex-direction: column;
+            z-index: 99;
+
+            .titleMainInHeadBody {
+                font-size: 80px;
+            }
+
+            .textMainInHeadBody {
+                font-size: 25px;
+            }
+        }
+
+        .rightheadbody {
+            flex: 1.6;
+            margin-top: 50px;
+
+            .image1 {
+                width: 100% !important;
+            }
+        }
+    }
+
+    .button {
+        background: #9c69e2;
+        border-radius: 10px;
+        padding: 3px 50px;
+        color: white;
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,34 @@
+.container {
+    width: 200px;
+    background: #d9d9d9;
+    color: black;
+    height: 100vh;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+
+    .logo {
+        margin-top: 40px;
+        cursor: pointer;
+    }
+
+    .nav {
+        width: 100%;
+        text-align: left;
+        margin-top: 20px;
+
+        .navtext {
+            cursor: pointer;
+            margin-top: 5px;
+            font-weight: 400px;
+            margin-left: 20px;
+        }
+
+        .navtext:hover {
+            background: #9c69e2;
+            padding: 5px 20px;
+            border-radius: 5px;
+        }
+    }
+}
