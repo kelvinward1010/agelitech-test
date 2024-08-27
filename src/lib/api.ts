@@ -1,7 +1,7 @@
 import axios from "axios";
 
-import storage from "@/utils/storage";
-import { BASE_URL } from "@/constant/config";
+import storage, { storageRefreshToken } from "@/utils/storage";
+import { BASE_URL, URL_API_REFRESHTOKEN } from "@/constant/config";
 
 export const apiClient = axios.create({
     baseURL: BASE_URL,
@@ -25,6 +25,30 @@ apiClient.interceptors.response.use(
         return response;
     },
     async function (error) {
+        if (error?.response?.status === 401) {
+            try {
+                // Gọi API để lấy token mới
+                const refreshtoken = storageRefreshToken.getToken();
+                const draftData = {
+                    refresh_token: refreshtoken,
+                };
+                const refreshTokenResponse = await apiClient.post(
+                    `${URL_API_REFRESHTOKEN}`,
+                    draftData,
+                );
+                const newToken = refreshTokenResponse.data?.data?.token;
+
+                // Lưu token mới vào local storage
+                storage.setToken(newToken);
+
+                // Thử gửi lại yêu cầu ban đầu với token mới
+                const originalRequest = error.config;
+                originalRequest.headers.Authorization = `Bearer ${newToken}`;
+                return apiClient(originalRequest);
+            } catch (refreshError) {
+                return Promise.reject(error);
+            }
+        }
         return Promise.reject(error);
     },
 );
